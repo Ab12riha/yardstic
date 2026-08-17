@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>YIC Admin Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3f3f3;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 8px;
+        }
+
+        button {
+            width: 96%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #8b0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>YIC</h1>
+
+    <h2>Admin Login</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+    >
+
+    <button onclick="login()">
+        Login
+    </button>
+
+    <button onclick="goHome()">
+        Back to Student Search
+    </button>
+
+    <div id="message"></div>
+
+</div>
+
+<script>
+
+function login() {
+
+    var username =
+        document.getElementById("username").value;
+
+    var password =
+        document.getElementById("password").value;
+
+    if (
+        username === "admin" &&
+        password === "YIC123"
+    ) {
+
+        sessionStorage.setItem(
+            "yicAdminLoggedIn",
+            "true"
+        );
+
+        document.getElementById("message").innerText =
+            "Login successful!";
+
+        setTimeout(function() {
+
+            window.location.href = "admin.html";
+
+        }, 500);
+
+    } else {
+
+        document.getElementById("message").innerText =
+            "Incorrect username or password.";
+
+    }
+}
+
+
+function goHome() {
+
+    window.location.href = "index.html";
+
+}
+
+</script>
+
+</body>
+</html>

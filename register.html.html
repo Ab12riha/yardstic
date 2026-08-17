@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YIC Student Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+        }
+
+        header {
+            background: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #8b0000;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background: #8b0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #650000;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Yardstik International College</h1>
+
+    <p>Student Registration</p>
+
+</header>
+
+
+<div class="container">
+
+    <div class="box">
+
+        <h2>Register Student</h2>
+
+
+        <label>Student ID</label>
+
+        <input
+            type="text"
+            id="studentId"
+            placeholder="Example: YIC002"
+        >
+
+
+        <label>Student Name</label>
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter full name"
+        >
+
+
+        <label>Department</label>
+
+        <input
+            type="text"
+            id="department"
+            placeholder="Enter department"
+        >
+
+
+        <label>Status</label>
+
+        <select id="status">
+
+            <option value="Active">
+                Active
+            </option>
+
+            <option value="Graduated">
+                Graduated
+            </option>
+
+            <option value="Suspended">
+                Suspended
+            </option>
+
+            <option value="Withdrawn">
+                Withdrawn
+            </option>
+
+        </select>
+
+
+        <button onclick="registerStudent()">
+            Register Student
+        </button>
+
+
+        <div id="message"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function registerStudent() {
+
+    const id =
+        document.getElementById("studentId")
+        .value
+        .trim();
+
+    const name =
+        document.getElementById("studentName")
+        .value
+        .trim();
+
+    const department =
+        document.getElementById("department")
+        .value
+        .trim();
+
+    const status =
+        document.getElementById("status")
+        .value;
+
+    const message =
+        document.getElementById("message");
+
+
+    if (
+        id === "" ||
+        name === "" ||
+        department === ""
+    ) {
+
+        message.innerText =
+            "Please fill in all fields.";
+
+        message.style.color = "red";
+
+        return;
+    }
+
+
+    const student = {
+
+        id: id,
+
+        name: name,
+
+        department: department,
+
+        status: status
+
+    };
+
+
+    localStorage.setItem(
+        "student_" + id,
+        JSON.stringify(student)
+    );
+
+
+    message.innerText =
+        "Student registered successfully!";
+
+    message.style.color =
+        "green";
+
+
+    document.getElementById("studentId").value = "";
+
+    document.getElementById("studentName").value = "";
+
+    document.getElementById("department").value = "";
+
+}
+
+</script>
+
+</body>
+</html>

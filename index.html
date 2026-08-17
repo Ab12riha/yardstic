@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yardstik International College | Student Portal</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f9fc;
+    color: #172b4d;
+}
+
+/* TOP BAR */
+
+.top-bar {
+    background: #f4c430;
+    height: 12px;
+}
+
+/* HEADER - EXTRA LARGE */
+
+header {
+    background: #5bc0eb;
+    padding: 50px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #f4c430;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #172b4d;
+    font-weight: 800;
+}
+
+.brand p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #22426b;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: #172b4d;
+    padding: 0 6%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #f4c430;
+    color: #172b4d;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #5bc0eb,
+        #bfefff
+    );
+
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin: 0 0 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* SEARCH */
+
+.search-section {
+    width: 90%;
+    max-width: 650px;
+    margin: -35px auto 50px;
+}
+
+.search-box {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+
+    text-align: center;
+}
+
+.search-box h3 {
+    margin-top: 0;
+    color: #168ac0;
+    font-size: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #d9e6ed;
+    border-radius: 7px;
+
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5bc0eb;
+}
+
+.check-button {
+    width: 100%;
+    padding: 15px;
+
+    background: #168ac0;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.check-button:hover {
+    background: #0b6e9b;
+}
+
+/* RESULT */
+
+#result {
+    margin-top: 25px;
+}
+
+.student-result {
+    background: #f4fbff;
+    border-left: 6px solid #f4c430;
+
+    padding: 22px;
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+.student-result h3 {
+    text-align: center;
+    color: #168ac0;
+}
+
+.info {
+    padding: 12px 0;
+    border-bottom: 1px solid #dcecf3;
+}
+
+.info:last-child {
+    border-bottom: none;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.active {
+    color: green;
+}
+
+.graduated {
+    color: #168ac0;
+}
+
+.suspended {
+    color: #d88900;
+}
+
+.withdrawn {
+    color: #c62828;
+}
+
+.not-found {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer .yellow {
+    color: #f4c430;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="top-bar"></div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="brand">
+
+        <!-- Extra Large Logo Image -->
+        <img src="LOGO.jpg" alt="Yardstik International College Logo" class="logo-img">
+
+        <div>
+
+            <h1>
+                Yardstik International College
+            </h1>
+
+            <p>
+                Addis Ababa, Ethiopia
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="index.html">
+        Student Status
+    </a>
+
+    <a href="register.html">
+        Registration
+    </a>
+
+    <a href="login.html">
+        Admin
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h2>
+        Student Status Verification
+    </h2>
+
+    <p>
+        Verify your student information and academic
+        status using your official YIC Student ID.
+    </p>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <h3>
+            Check Your Status
+        </h3>
+
+        <input
+            type="text"
+            id="studentId"
+            placeholder="Enter Student ID e.g. YIC001"
+        >
+
+        <button
+            class="check-button"
+            onclick="checkStudent()"
+        >
+            CHECK STUDENT STATUS
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Yardstik International College
+    </h3>
+
+    <p>
+        Addis Ababa, Ethiopia
+    </p>
+
+    <p class="yellow">
+        © 2026 YIC. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+function checkStudent() {
+
+    var id =
+        document
+        .getElementById("studentId")
+        .value
+        .trim();
+
+    var result =
+        document
+        .getElementById("result");
+
+
+    if (id === "") {
+
+        result.innerHTML =
+            "<p class='not-found'>Please enter your Student ID.</p>";
+
+        return;
+    }
+
+
+    var data =
+        localStorage.getItem(
+            "student_" + id
+        );
+
+
+    if (!data) {
+
+        result.innerHTML =
+            "<p class='not-found'>Student ID not found.</p>";
+
+        return;
+    }
+
+
+    var student =
+        JSON.parse(data);
+
+
+    var statusClass =
+        student.status.toLowerCase();
+
+
+    result.innerHTML = `
+
+        <div class="student-result">
+
+            <h3>
+                ✓ Student Found
+            </h3>
+
+            <div class="info">
+                <strong>Student ID:</strong>
+                ${student.id}
+            </div>
+
+            <div class="info">
+                <strong>Student Name:</strong>
+                ${student.name}
+            </div>
+
+            <div class="info">
+                <strong>Department:</strong>
+                ${student.department}
+            </div>
+
+            <div class="info">
+
+                <strong>Status:</strong>
+
+                <span class="status ${statusClass}">
+                    ${student.status}
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
